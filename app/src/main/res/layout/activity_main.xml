@@ -4,7 +4,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp"
-            android:fillViewport="false">
+            android:fillViewport="false"
+            android:background="#b1d2ff">
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -16,16 +17,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="id.sch.smktelkom_mlg.xirpl6034.pengumpulantugas.MainActivity"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="#b1e9ff">
 
 
     <TextView
-        android:layout_width="351dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Laporan Pengumpulan Tugas"
         android:id="@+id/textView1"
         style="@style/Base.TextAppearance.AppCompat.Headline"
-        android:layout_gravity="center_vertical"/>
+        android:layout_gravity="center_horizontal"/>
 
 
     <ImageView
@@ -46,21 +48,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/radioGroupStatus"
-        android:measureWithLargestChild="true">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kelas X"
-            android:id="@+id/radioButton2"
-            android:checked="false"
-            />
+        android:orientation="horizontal"
+        android:measureWithLargestChild="true"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kelas XI"
             android:id="@+id/radioButton"
+            android:checked="false"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas X"
+            android:id="@+id/radioButton2"
             android:checked="false"
             />
 
@@ -74,14 +79,24 @@
         android:text="Jenis Tugas"
         android:id="@+id/textView3"
         android:layout_gravity="center_horizontal"
-        style="@style/Base.TextAppearance.AppCompat.Subhead"/>
+        style="@style/Base.TextAppearance.AppCompat.Headline"/>
+
+    <LinearLayout
+        android:layout_width="319dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+
+
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ulangan"
         android:id="@+id/checkBox1"
-        android:checked="false"/>
+        android:checked="false"
+        />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -96,28 +111,34 @@
         android:layout_height="wrap_content"
         android:text="Latihan"
         android:id="@+id/checkBox3"
-        android:checked="false"/>
+        android:checked="false"
+        />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nama Guru"
         android:id="@+id/textView"
-        style="@style/Base.TextAppearance.AppCompat.Subhead"
-        android:layout_gravity="center_horizontal"/>
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
 
     <Spinner
-        android:layout_width="match_parent"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:entries="@array/guru"
-        android:id="@+id/spinnerGuru"/>
+        android:id="@+id/spinnerGuru"
+        android:layout_gravity="center_horizontal"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SUBMIT"
         android:id="@+id/buttonOK"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:background="#ffffff"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -126,7 +147,8 @@
         tools:text="Hasil"
         android:id="@+id/textViewHasil"
         android:text="Hasil"
-        style="@style/Base.TextAppearance.AppCompat.Subhead"/>
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_margin="10dp"/>
 
 </LinearLayout>
 </ScrollView>
